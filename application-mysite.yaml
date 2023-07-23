@@ -12,7 +12,7 @@ spec:
     directory:
       jsonnet: {}
       recurse: true
-    path: ./
+    path: ./mysite
     repoURL: https://github.com/marconesns/mysite-app.git
     targetRevision: HEAD
   syncPolicy:
