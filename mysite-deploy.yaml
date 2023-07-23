@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mysite
+  name: mysite
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysite
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mysite
+    spec:
+      containers:
+      - image: marconesns/mysite-nginx:v1.0
+        name: mysite
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 25m
+            memory: 25Mi
+status: {}
